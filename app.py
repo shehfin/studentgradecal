@@ -1,3 +1,5 @@
+import time
+
 def calculate_metrics(marks):
     total = sum(marks)
     average = total / len(marks) if marks else 0
@@ -11,9 +13,13 @@ def calculate_grade(average):
     else: return 'F'
 
 if __name__ == "__main__":
-    sample_marks = [85, 90, 78, 92, 88]
+    sample_marks = [85, 75, 80]
     tot, avg = calculate_metrics(sample_marks)
     grade = calculate_grade(avg)
     print(f"Total Marks: {tot}")
     print(f"Average Marks: {avg}")
     print(f"Final Grade: {grade}")
+    
+    print("Application is running. Press Ctrl+C to exit.")
+    while True:
+        time.sleep(3600)
